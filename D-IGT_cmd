@@ -1,0 +1,14 @@
+#VoIP (Voice over IP): Simulates voice communication using G.711 codec with RTP and VAD.
+-a 10.0.0.1 -rp 10001 VoIP -x G.711.2 -h RTP -VAD
+
+#Quake3: Simulates game traffic for Quake III, focusing on real-time multiplayer updates.
+-a 10.0.0.1 -rp 10002 Quake3
+
+#Telnet: Simulates remote terminal sessions with bidirectional text-based communication.
+-a 10.0.0.1 -rp 10002 Telnet
+
+#Counter-Strike (CSa): Simulates game traffic for Counter-Strike with small, frequent UDP packets.
+-a 10.0.0.1 -rp 10002 CSa
+
+#DNS: Simulates DNS traffic, typically small UDP packets for domain resolution.
+-a 10.0.0.1 -rp 10003 DNS
