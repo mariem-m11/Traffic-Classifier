@@ -89,7 +89,7 @@ sudo mn --topo single,3 --mac --controller remote --switch ovs,protocols=OpenFlo
 ### Real-Time Traffic Prediction
 Start real-time prediction:
 ```bash
-python3 traffic_classifier.py supervised
+python3 traffic_classifier.py kneighbors
 ```
 
 ### Generate Traffic with D-IGT
