@@ -247,19 +247,16 @@ if __name__ == '__main__':
 
         else:
             p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT) #start ryu process
-            if sys.argv[1] == 'logistic':
-                infile = open('models/LogisticRegression','rb')
-            elif sys.argv[1] == 'kmeans':
-                infile = open('models/KMeans_Clustering','rb')
+           
+            elif sys.argv[1] == 'Autoencoder':
+                infile = open('models/Models/AutoencoderAttentionModel-Adam0.1-100epochs-dim256.pkl','rb')
             elif sys.argv[1] == 'svm':
-                infile = open('models/SVC','rb')
-            elif sys.argv[1] == 'kneighbors':
-                infile = open('models/KNeighbors','rb')
+                infile = open('models/XGBoost','rb')
+            elif sys.argv[1] == 'XGBoost':
+                infile = open('models/KNN','rb')
             elif sys.argv[1] == 'Randomforest':
                 infile = open('models/RandomForestClassifier','rb')
-            elif sys.argv[1] == 'gaussiannb':
-                infile = open('models/GaussianNB','rb')
-   
+            
 
             model = pickle.load(infile) #unload previously trained ML model (refer to Jupyter notebook for details)
             infile.close()
